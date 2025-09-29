@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "/api/generate-certificate/route": [
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_308fb7d1._.js",
+      "static/chunks/08db3_next_dist_compiled_react-dom_54ca18ff._.js",
+      "static/chunks/08db3_next_dist_compiled_next-devtools_index_ebefabbd.js",
+      "static/chunks/08db3_next_dist_compiled_dd60db8f._.js",
+      "static/chunks/08db3_next_dist_client_675e6f48._.js",
+      "static/chunks/08db3_next_dist_94150851._.js",
+      "static/chunks/08db3_@swc_helpers_cjs_76ac40e5._.js",
+      "static/chunks/quiz-app_a0ff3932._.js",
+      "static/chunks/turbopack-quiz-app_4c322b8a._.js"
+    ]
+  }
+}
