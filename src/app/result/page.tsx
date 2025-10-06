@@ -44,8 +44,14 @@ export default function ResultPage() {
     
     setIsGeneratingCertificate(true);
     try {
+      // Sanitize the name before sending
+      const sanitizedName = userDetails.name.trim();
+      if (!sanitizedName) {
+        throw new Error('Name is required');
+      }
+      
       console.log('Sending certificate data:', {
-        name: userDetails.name,
+        name: sanitizedName,
         course: userDetails.course,
         batch: userDetails.batch,
         score: result.score,

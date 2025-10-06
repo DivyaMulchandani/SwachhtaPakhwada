@@ -19,18 +19,29 @@ export async function POST(request: NextRequest) {
     // Draw the template image
     ctx.drawImage(templateImage, 0, 0);
     
-    // Set up calligraphy-style font for the name
-    ctx.font = 'italic 72px "Brush Script MT", "Lucida Handwriting", cursive';
-    ctx.fillStyle = '#2c2c2c'; // Dark grey color
+    // Set up text rendering properties
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
+    // Try to use a web-safe font that's likely to support various characters
+    ctx.font = 'bold 60px Arial, "Noto Sans", sans-serif';
+    ctx.fillStyle = '#000080'; // Navy blue color
+    
     // Calculate position for the name (centered on the line)
     const nameX = canvas.width / 2;
-    const nameY = canvas.height * 0.57; // Adjust this value to position on the line
+    const nameY = canvas.height * 0.57;
     
-    // Draw the name with calligraphy style
-    ctx.fillText(name, nameX, nameY);
+    // Add a subtle shadow for better visibility
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+    ctx.shadowBlur = 2;
+    ctx.shadowOffsetX = 1;
+    ctx.shadowOffsetY = 1;
+    
+    // Draw the name
+    ctx.fillText(name.toUpperCase(), nameX, nameY);
+    
+    // Reset shadow
+    ctx.shadowColor = 'transparent';
     
     // Convert canvas to image buffer
     const imageBuffer = canvas.toBuffer('image/png');
