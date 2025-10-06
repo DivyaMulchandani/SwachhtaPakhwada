@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PDFDocument } from 'pdf-lib';
-import { createCanvas, loadImage } from 'canvas';
+import { createCanvas, loadImage, registerFont } from 'canvas';
 import path from 'path';
+import fs from 'fs';
 
-// Configure canvas for better text rendering
-process.env.FONTCONFIG_PATH = '/var/tmp';
+// Set up canvas configuration
+const fontPath = path.join(process.cwd(), 'src/app/api/generate-certificate/fonts');
+try {
+  if (!fs.existsSync(fontPath)) {
+    fs.mkdirSync(fontPath, { recursive: true });
+  }
+  process.env.FONTCONFIG_PATH = fontPath;
+} catch (error) {
+  console.error('Font directory setup error:', error);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,55 +31,79 @@ export async function POST(request: NextRequest) {
     // Draw the template image
     ctx.drawImage(templateImage, 0, 0);
     
-    // Set up text rendering properties
+    // Enhanced text rendering setup
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
-    // Try multiple font configurations
-    const fonts = [
-      'bold 50px sans-serif',
-      'bold 50px Arial',
-      'bold 50px system-ui',
-      '50px sans-serif' // Fallback without bold
-    ];
+    // Use a simple font configuration
+    ctx.font = 'bold 65px sans-serif';
     
-    // Try each font until one works
-    let fontWorked = false;
-    for (const font of fonts) {
-      try {
-        ctx.font = font;
-        // Test if font works by measuring text
-        ctx.measureText(name);
-        fontWorked = true;
-        console.log('Successfully set font:', font);
-        break;
-      } catch (error) {
-        console.log('Font failed:', font, error instanceof Error ? error.message : 'Unknown error');
-        continue;
-      }
-    }
+    // Set up colors for better visibility
+    ctx.fillStyle = '#000080';  // Navy blue
     
-    if (!fontWorked) {
-      console.log('Warning: All fonts failed, using default');
-      ctx.font = '50px sans-serif';
-    }
+    // Calculate text metrics to ensure proper positioning
+    const text = name.toUpperCase();
+    const metrics = ctx.measureText(text);
+    const textWidth = metrics.width;
     
-    ctx.fillStyle = '#000000'; // Black color for maximum contrast
+    // Calculate position
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height * 0.52; // Positioned at 52% from top
+    
+    // Draw with white border for better visibility
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = 'white';
+    ctx.strokeText(text, centerX, centerY);
+    
+    // Draw main text
+    ctx.fillText(text, centerX, centerY);
+    
+    console.log('Text rendering details:', {
+      text,
+      width: textWidth,
+      position: { x: centerX, y: centerY },
+      fontHeight: parseInt(ctx.font),
+      canvasSize: { width: canvas.width, height: canvas.height }
+    });
     
     // Calculate position for the name
     const nameX = canvas.width / 2;
     const nameY = canvas.height * 0.56;
     
-    // Create text with outline for better visibility
-    const text = name.toUpperCase();
+    // Enhanced text rendering setup
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
     
-    // Draw white outline
+    // Use a simple font configuration
+    ctx.font = 'bold 65px sans-serif';
+    
+    // Set up colors for better visibility
+    ctx.fillStyle = '#000080';  // Navy blue
+    
+    // Calculate text metrics to ensure proper positioning
+    const upperName = name.toUpperCase();
+    const metrics = ctx.measureText(upperName);
+    const textWidth = metrics.width;
+    
+    // Calculate position
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height * 0.52; // Positioned at 52% from top
+    
+    // Draw with white border for better visibility
+    ctx.lineWidth = 4;
     ctx.strokeStyle = 'white';
-    ctx.lineWidth = 8;
-    ctx.strokeText(text, nameX, nameY);
+    ctx.strokeText(upperName, centerX, centerY);
     
-    // Draw text
-    ctx.fillText(text, nameX, nameY);
+    // Draw main text
+    ctx.fillText(upperName, centerX, centerY);
+    
+    console.log('Text rendering details:', {
+      text: upperName,
+      width: textWidth,
+      position: { x: centerX, y: centerY },
+      fontHeight: parseInt(ctx.font),
+      canvasSize: { width: canvas.width, height: canvas.height }
+    });
     
     // Log for debugging
     console.log('Drawing text:', {
