@@ -3,6 +3,9 @@ import { PDFDocument } from 'pdf-lib';
 import { createCanvas, loadImage } from 'canvas';
 import path from 'path';
 
+// Configure canvas for better text rendering
+process.env.FONTCONFIG_PATH = '/var/tmp';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -23,9 +26,36 @@ export async function POST(request: NextRequest) {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
-    // Use basic sans-serif font
-    ctx.font = 'bold 50px sans-serif';
-    ctx.fillStyle = '#000000'; // Navy blue color
+    // Try multiple font configurations
+    const fonts = [
+      'bold 50px sans-serif',
+      'bold 50px Arial',
+      'bold 50px system-ui',
+      '50px sans-serif' // Fallback without bold
+    ];
+    
+    // Try each font until one works
+    let fontWorked = false;
+    for (const font of fonts) {
+      try {
+        ctx.font = font;
+        // Test if font works by measuring text
+        ctx.measureText(name);
+        fontWorked = true;
+        console.log('Successfully set font:', font);
+        break;
+      } catch (error) {
+        console.log('Font failed:', font, error instanceof Error ? error.message : 'Unknown error');
+        continue;
+      }
+    }
+    
+    if (!fontWorked) {
+      console.log('Warning: All fonts failed, using default');
+      ctx.font = '50px sans-serif';
+    }
+    
+    ctx.fillStyle = '#000000'; // Black color for maximum contrast
     
     // Calculate position for the name
     const nameX = canvas.width / 2;
