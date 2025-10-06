@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const metrics = ctx.measureText(text);
     const textWidth = metrics.width;
     
-    // Calculate position
+    // Calculate position for the text
     const centerX = canvas.width / 2;
     const centerY = canvas.height * 0.52; // Positioned at 52% from top
     
@@ -82,25 +82,25 @@ export async function POST(request: NextRequest) {
     
     // Calculate text metrics to ensure proper positioning
     const upperName = name.toUpperCase();
-    const metrics = ctx.measureText(upperName);
-    const textWidth = metrics.width;
+    const upperNameMetrics = ctx.measureText(upperName);
+    const upperNameTextWidth = upperNameMetrics.width;
     
     // Calculate position
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height * 0.52; // Positioned at 52% from top
+    const centerX2 = canvas.width / 2;
+    const centerY2 = canvas.height * 0.52; // Positioned at 52% from top
     
     // Draw with white border for better visibility
     ctx.lineWidth = 4;
     ctx.strokeStyle = 'white';
-    ctx.strokeText(upperName, centerX, centerY);
+    ctx.strokeText(upperName, centerX2, centerY2);
     
     // Draw main text
-    ctx.fillText(upperName, centerX, centerY);
+    ctx.fillText(upperName, centerX2, centerY2);
     
     console.log('Text rendering details:', {
       text: upperName,
-      width: textWidth,
-      position: { x: centerX, y: centerY },
+      width: upperNameTextWidth,
+      position: { x: centerX2, y: centerY2 },
       fontHeight: parseInt(ctx.font),
       canvasSize: { width: canvas.width, height: canvas.height }
     });
