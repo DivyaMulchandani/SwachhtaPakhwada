@@ -44,6 +44,13 @@ export default function ResultPage() {
     
     setIsGeneratingCertificate(true);
     try {
+      console.log('Sending certificate data:', {
+        name: userDetails.name,
+        course: userDetails.course,
+        batch: userDetails.batch,
+        score: result.score,
+        totalQuestions: result.totalQuestions
+      });
       const response = await fetch('/api/generate-certificate', {
         method: 'POST',
         headers: {

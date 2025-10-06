@@ -81,7 +81,7 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 async function POST(request) {
     try {
         const body = await request.json();
-        const { name, course, score, totalQuestions, batch, school } = body;
+        const { name } = body;
         // Load the certificate template image
         const templatePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'src/app/api/generate-certificate/certi.jpg');
         const templateImage = await (0, __TURBOPACK__imported__module__$5b$externals$5d2f$canvas__$5b$external$5d$__$28$canvas$2c$__cjs$29$__["loadImage"])(templatePath);
@@ -120,7 +120,7 @@ async function POST(request) {
         // Serialize the PDF
         const pdfBytes = await pdfDoc.save();
         // Return the PDF as a response
-        return new __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"](pdfBytes, {
+        return new __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"](Buffer.from(pdfBytes), {
             headers: {
                 'Content-Type': 'application/pdf',
                 'Content-Disposition': `attachment; filename="Swachhata-Certificate-${name.replace(/\s+/g, '-')}.pdf"`

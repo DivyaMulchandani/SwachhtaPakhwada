@@ -1,4 +1,5 @@
 {
+  "/api/generate-certificate/route": "app/api/generate-certificate/route.js",
   "/api/submit-quiz/route": "app/api/submit-quiz/route.js",
   "/page": "app/page.js",
   "/quiz/page": "app/quiz/page.js",
