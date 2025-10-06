@@ -90,16 +90,37 @@ async function POST(request) {
         const ctx = canvas.getContext('2d');
         // Draw the template image
         ctx.drawImage(templateImage, 0, 0);
-        // Set up calligraphy-style font for the name
-        ctx.font = 'italic 72px "Brush Script MT", "Lucida Handwriting", cursive';
-        ctx.fillStyle = '#2c2c2c'; // Dark grey color
+        // Set up text rendering properties
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        // Calculate position for the name (centered on the line)
+        // Use basic sans-serif font
+        ctx.font = 'bold 50px sans-serif';
+        ctx.fillStyle = '#000000'; // Navy blue color
+        // Calculate position for the name
         const nameX = canvas.width / 2;
-        const nameY = canvas.height * 0.57; // Adjust this value to position on the line
-        // Draw the name with calligraphy style
-        ctx.fillText(name, nameX, nameY);
+        const nameY = canvas.height * 0.56;
+        // Create text with outline for better visibility
+        const text = name.toUpperCase();
+        // Draw white outline
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 8;
+        ctx.strokeText(text, nameX, nameY);
+        // Draw text
+        ctx.fillText(text, nameX, nameY);
+        // Log for debugging
+        console.log('Drawing text:', {
+            text,
+            position: {
+                x: nameX,
+                y: nameY
+            },
+            canvasSize: {
+                width: canvas.width,
+                height: canvas.height
+            }
+        });
+        // Reset shadow
+        ctx.shadowColor = 'transparent';
         // Convert canvas to image buffer
         const imageBuffer = canvas.toBuffer('image/png');
         // Create PDF document

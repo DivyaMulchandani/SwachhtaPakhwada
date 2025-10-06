@@ -50,6 +50,8 @@ export default function ResultPage() {
         throw new Error('Name is required');
       }
       
+      console.log('User Details:', userDetails);
+      console.log('Sanitized Name:', sanitizedName);
       console.log('Sending certificate data:', {
         name: sanitizedName,
         course: userDetails.course,

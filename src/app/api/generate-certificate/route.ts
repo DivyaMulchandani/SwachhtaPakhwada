@@ -23,22 +23,31 @@ export async function POST(request: NextRequest) {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
-    // Try to use a web-safe font that's likely to support various characters
-    //ctx.font = 'bold 60px Arial, "Noto Sans", sans-serif';
-    ctx.fillStyle = '#000080'; // Navy blue color
+    // Use basic sans-serif font
+    ctx.font = 'bold 50px sans-serif';
+    ctx.fillStyle = '#000000'; // Navy blue color
     
-    // Calculate position for the name (centered on the line)
+    // Calculate position for the name
     const nameX = canvas.width / 2;
-    const nameY = canvas.height * 0.57;
+    const nameY = canvas.height * 0.56;
     
-    // Add a subtle shadow for better visibility
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
-    ctx.shadowBlur = 2;
-    ctx.shadowOffsetX = 1;
-    ctx.shadowOffsetY = 1;
+    // Create text with outline for better visibility
+    const text = name.toUpperCase();
     
-    // Draw the name
-    ctx.fillText(name.toUpperCase(), nameX, nameY);
+    // Draw white outline
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 8;
+    ctx.strokeText(text, nameX, nameY);
+    
+    // Draw text
+    ctx.fillText(text, nameX, nameY);
+    
+    // Log for debugging
+    console.log('Drawing text:', {
+      text,
+      position: { x: nameX, y: nameY },
+      canvasSize: { width: canvas.width, height: canvas.height }
+    });
     
     // Reset shadow
     ctx.shadowColor = 'transparent';
