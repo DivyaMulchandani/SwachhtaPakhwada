@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     ctx.textBaseline = 'middle';
     
     // Try to use a web-safe font that's likely to support various characters
-    ctx.font = 'bold 60px Arial, "Noto Sans", sans-serif';
+    //ctx.font = 'bold 60px Arial, "Noto Sans", sans-serif';
     ctx.fillStyle = '#000080'; // Navy blue color
     
     // Calculate position for the name (centered on the line)
