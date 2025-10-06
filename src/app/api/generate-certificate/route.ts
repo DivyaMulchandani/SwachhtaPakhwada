@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument } from 'pdf-lib';
 import { createCanvas, loadImage } from 'canvas';
-import fs from 'fs';
 import path from 'path';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, course, score, totalQuestions, batch, school } = body;
+    const { name } = body;
 
     // Load the certificate template image
     const templatePath = path.join(process.cwd(), 'src/app/api/generate-certificate/certi.jpg');
@@ -55,7 +54,7 @@ export async function POST(request: NextRequest) {
     const pdfBytes = await pdfDoc.save();
 
     // Return the PDF as a response
-    return new NextResponse(pdfBytes, {
+    return new NextResponse(Buffer.from(pdfBytes), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="Swachhata-Certificate-${name.replace(/\s+/g, '-')}.pdf"`,

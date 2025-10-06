@@ -7,7 +7,14 @@ import { quizQuestions } from '@/lib/quizData';
 export default function QuizPage() {
   const router = useRouter();
   const [answers, setAnswers] = useState<number[]>(new Array(15).fill(-1));
-  const [userDetails, setUserDetails] = useState<any>(null);
+  interface UserDetails {
+    name: string;
+    enrollmentNumber: string;
+    course: string;
+    batch: string;
+    school: string;
+  }
+  const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {

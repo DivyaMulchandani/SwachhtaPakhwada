@@ -110,7 +110,7 @@ function ResultPage() {
                         className: "animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"
                     }, void 0, false, {
                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                        lineNumber: 89,
+                        lineNumber: 96,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -118,18 +118,18 @@ function ResultPage() {
                         children: "Loading..."
                     }, void 0, false, {
                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                        lineNumber: 90,
+                        lineNumber: 97,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                lineNumber: 88,
+                lineNumber: 95,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-            lineNumber: 87,
+            lineNumber: 94,
             columnNumber: 7
         }, this);
     }
@@ -146,7 +146,7 @@ function ResultPage() {
                             children: "Quiz Results"
                         }, void 0, false, {
                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 108,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -154,13 +154,13 @@ function ResultPage() {
                             children: "Congratulations on completing the quiz!"
                         }, void 0, false, {
                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                            lineNumber: 104,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                    lineNumber: 100,
+                    lineNumber: 107,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -174,7 +174,7 @@ function ResultPage() {
                                     children: result.score
                                 }, void 0, false, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -182,7 +182,7 @@ function ResultPage() {
                                     children: result.passed ? 'Congratulations! You Passed!' : 'Better Luck Next Time'
                                 }, void 0, false, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 126,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -196,7 +196,7 @@ function ResultPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 129,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -208,13 +208,13 @@ function ResultPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                            lineNumber: 111,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -228,7 +228,7 @@ function ResultPage() {
                                             children: result.score
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 140,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -236,13 +236,13 @@ function ResultPage() {
                                             children: "Correct Answers"
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 141,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 139,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -253,7 +253,7 @@ function ResultPage() {
                                             children: result.totalQuestions - result.score
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 144,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -261,13 +261,13 @@ function ResultPage() {
                                             children: "Incorrect Answers"
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 145,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -281,7 +281,7 @@ function ResultPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 148,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -289,19 +289,19 @@ function ResultPage() {
                                             children: "Percentage"
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 149,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 147,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                            lineNumber: 131,
+                            lineNumber: 138,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -312,7 +312,7 @@ function ResultPage() {
                                     children: "Your Details"
                                 }, void 0, false, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -325,7 +325,7 @@ function ResultPage() {
                                                     children: "Name:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 158,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -333,13 +333,13 @@ function ResultPage() {
                                                     children: userDetails.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 159,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 157,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -349,7 +349,7 @@ function ResultPage() {
                                                     children: "Enrollment Number:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 155,
+                                                    lineNumber: 162,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -357,13 +357,13 @@ function ResultPage() {
                                                     children: userDetails.enrollmentNumber
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 163,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 161,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -373,7 +373,7 @@ function ResultPage() {
                                                     children: "Batch (Semester):"
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 166,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -381,13 +381,13 @@ function ResultPage() {
                                                     children: userDetails.batch
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 160,
+                                                    lineNumber: 167,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -397,7 +397,7 @@ function ResultPage() {
                                                     children: "Course:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 170,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -405,13 +405,13 @@ function ResultPage() {
                                                     children: userDetails.course
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 171,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 169,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -422,7 +422,7 @@ function ResultPage() {
                                                     children: "School/University:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -430,31 +430,31 @@ function ResultPage() {
                                                     children: userDetails.school
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 175,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 173,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 156,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                            lineNumber: 147,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                    lineNumber: 110,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,24 +480,24 @@ function ResultPage() {
                                                         clipRule: "evenodd"
                                                     }, void 0, false, {
                                                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                        lineNumber: 182,
+                                                        lineNumber: 189,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                    lineNumber: 181,
+                                                    lineNumber: 188,
                                                     columnNumber: 21
                                                 }, this),
                                                 "You are eligible for a certificate!"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 180,
+                                            lineNumber: 187,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 186,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -507,13 +507,13 @@ function ResultPage() {
                                         children: isGeneratingCertificate ? 'Generating...' : 'Download Certificate'
                                     }, void 0, false, {
                                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 195,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                lineNumber: 178,
+                                lineNumber: 185,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-6",
@@ -530,24 +530,24 @@ function ResultPage() {
                                                 clipRule: "evenodd"
                                             }, void 0, false, {
                                                 fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                                lineNumber: 200,
+                                                lineNumber: 207,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 206,
                                             columnNumber: 19
                                         }, this),
                                         "You need at least 70% to get a certificate"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 205,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                lineNumber: 197,
+                                lineNumber: 204,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -559,7 +559,7 @@ function ResultPage() {
                                         children: "Retake Quiz"
                                     }, void 0, false, {
                                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 215,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$quiz$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -568,35 +568,35 @@ function ResultPage() {
                                         children: "Start New Quiz"
                                     }, void 0, false, {
                                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 222,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                                lineNumber: 207,
+                                lineNumber: 214,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                        lineNumber: 176,
+                        lineNumber: 183,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/quiz-app/src/app/result/page.tsx",
-                    lineNumber: 175,
+                    lineNumber: 182,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/quiz-app/src/app/result/page.tsx",
-            lineNumber: 98,
+            lineNumber: 105,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/quiz-app/src/app/result/page.tsx",
-        lineNumber: 97,
+        lineNumber: 104,
         columnNumber: 5
     }, this);
 }

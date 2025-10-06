@@ -15,7 +15,14 @@ interface QuizResult {
 export default function ResultPage() {
   const router = useRouter();
   const [result, setResult] = useState<QuizResult | null>(null);
-  const [userDetails, setUserDetails] = useState<any>(null);
+  interface UserDetails {
+    name: string;
+    enrollmentNumber: string;
+    course: string;
+    batch: string;
+    school: string;
+  }
+  const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
   const [isGeneratingCertificate, setIsGeneratingCertificate] = useState(false);
 
   useEffect(() => {
