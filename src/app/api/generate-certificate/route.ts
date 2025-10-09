@@ -1,136 +1,63 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PDFDocument } from 'pdf-lib';
-import { createCanvas, loadImage, registerFont } from 'canvas';
-import path from 'path';
+import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import fs from 'fs';
-
-// Set up canvas configuration
-const fontPath = path.join(process.cwd(), 'src/app/api/generate-certificate/fonts');
-try {
-  if (!fs.existsSync(fontPath)) {
-    fs.mkdirSync(fontPath, { recursive: true });
-  }
-  process.env.FONTCONFIG_PATH = fontPath;
-} catch (error) {
-  console.error('Font directory setup error:', error);
-}
+import path from 'path';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name } = body;
 
-    // Load the certificate template image
+    // Read the certificate background image from the repo
     const templatePath = path.join(process.cwd(), 'src/app/api/generate-certificate/certi.jpg');
-    const templateImage = await loadImage(templatePath);
-    
-    // Create canvas to modify the image
-    const canvas = createCanvas(templateImage.width, templateImage.height);
-    const ctx = canvas.getContext('2d');
-    
-    // Draw the template image
-    ctx.drawImage(templateImage, 0, 0);
-    
-    // Enhanced text rendering setup
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    
-    // Use a simple font configuration
-    ctx.font = 'bold 65px sans-serif';
-    
-    // Set up colors for better visibility
-    ctx.fillStyle = '#000080';  // Navy blue
-    
-    // Calculate text metrics to ensure proper positioning
-    const text = name.toUpperCase();
-    const metrics = ctx.measureText(text);
-    const textWidth = metrics.width;
-    
-    // Calculate position for the text
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height * 0.52; // Positioned at 52% from top
-    
-    // Draw with white border for better visibility
-    ctx.lineWidth = 4;
-    ctx.strokeStyle = 'white';
-    ctx.strokeText(text, centerX, centerY);
-    
-    // Draw main text
-    ctx.fillText(text, centerX, centerY);
-    
-    console.log('Text rendering details:', {
-      text,
-      width: textWidth,
-      position: { x: centerX, y: centerY },
-      fontHeight: parseInt(ctx.font),
-      canvasSize: { width: canvas.width, height: canvas.height }
-    });
-    
-    // Calculate position for the name
-    const nameX = canvas.width / 2;
-    const nameY = canvas.height * 0.56;
-    
-    // Enhanced text rendering setup
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    
-    // Use a simple font configuration
-    ctx.font = 'bold 65px sans-serif';
-    
-    // Set up colors for better visibility
-    ctx.fillStyle = '#000080';  // Navy blue
-    
-    // Calculate text metrics to ensure proper positioning
-    const upperName = name.toUpperCase();
-    const upperNameMetrics = ctx.measureText(upperName);
-    const upperNameTextWidth = upperNameMetrics.width;
-    
-    // Calculate position
-    const centerX2 = canvas.width / 2;
-    const centerY2 = canvas.height * 0.52; // Positioned at 52% from top
-    
-    // Draw with white border for better visibility
-    ctx.lineWidth = 4;
-    ctx.strokeStyle = 'white';
-    ctx.strokeText(upperName, centerX2, centerY2);
-    
-    // Draw main text
-    ctx.fillText(upperName, centerX2, centerY2);
-    
-    console.log('Text rendering details:', {
-      text: upperName,
-      width: upperNameTextWidth,
-      position: { x: centerX2, y: centerY2 },
-      fontHeight: parseInt(ctx.font),
-      canvasSize: { width: canvas.width, height: canvas.height }
-    });
-    
-    // Log for debugging
-    console.log('Drawing text:', {
-      text,
-      position: { x: nameX, y: nameY },
-      canvasSize: { width: canvas.width, height: canvas.height }
-    });
-    
-    // Reset shadow
-    ctx.shadowColor = 'transparent';
-    
-    // Convert canvas to image buffer
-    const imageBuffer = canvas.toBuffer('image/png');
-    
-    // Create PDF document
+    const templateBytes = fs.readFileSync(templatePath);
+
+    // Create a new PDF document and embed the JPEG
     const pdfDoc = await PDFDocument.create();
-    const page = pdfDoc.addPage([842, 595]); // Landscape A4 size
-    
-    // Embed the modified image
-    const image = await pdfDoc.embedPng(imageBuffer);
-    
-    // Draw the image on the PDF page
-    page.drawImage(image, {
+    const jpgImage = await pdfDoc.embedJpg(templateBytes);
+
+    const pageWidth = jpgImage.width;
+    const pageHeight = jpgImage.height;
+
+    const page = pdfDoc.addPage([pageWidth, pageHeight]);
+
+    // Draw the background image to fill the page
+    page.drawImage(jpgImage, {
       x: 0,
       y: 0,
-      width: 842,
-      height: 595,
+      width: pageWidth,
+      height: pageHeight,
+    });
+
+    // Use a standard font for maximum compatibility
+    const font = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+    // Prepare the name text and sizing
+    const text = name ? String(name).toUpperCase() : '';
+    // Scale font size based on page width for responsiveness
+    const fontSize = Math.max(26, Math.floor(pageWidth * 0.03));
+    const textWidth = font.widthOfTextAtSize(text, fontSize);
+
+    // Calculate centered position (slightly below center vertically)
+    const x = (pageWidth - textWidth) / 2;
+    const y = pageHeight * 0.42;
+
+    // Draw a white shadow/border by drawing the same text slightly offset in white
+    page.drawText(text, {
+      x: x + 2,
+      y: y - 2,
+      size: fontSize + 2,
+      font,
+      color: rgb(1, 1, 1),
+    });
+
+    // Draw the main text in navy color
+    page.drawText(text, {
+      x,
+      y,
+      size: fontSize,
+      font,
+      color: rgb(0.0, 0.2, 0.6),
     });
 
     // Serialize the PDF
@@ -140,7 +67,7 @@ export async function POST(request: NextRequest) {
     return new NextResponse(Buffer.from(pdfBytes), {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="Swachhata-Certificate-${name.replace(/\s+/g, '-')}.pdf"`,
+        'Content-Disposition': `attachment; filename="Certificate-${text.replace(/\s+/g, '-') || 'recipient'}.pdf"`,
       },
     });
   } catch (error) {
