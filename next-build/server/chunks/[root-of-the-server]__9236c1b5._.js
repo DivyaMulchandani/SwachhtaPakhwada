@@ -83,7 +83,7 @@ async function POST(request) {
         const body = await request.json();
         const { name } = body;
         // Load the certificate template image
-        const templatePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'src/app/api/generate-certificate/certi.jpg');
+        const templatePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'src/app/api/generate-certificate/certi.png');
         const templateImage = await (0, __TURBOPACK__imported__module__$5b$externals$5d2f$canvas__$5b$external$5d$__$28$canvas$2c$__cjs$29$__["loadImage"])(templatePath);
         // Create canvas to modify the image
         const canvas = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$canvas__$5b$external$5d$__$28$canvas$2c$__cjs$29$__["createCanvas"])(templateImage.width, templateImage.height);

@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     const { name } = body;
 
     // Read the certificate background image from the repo
-    const templatePath = path.join(process.cwd(), 'src/app/api/generate-certificate/certi.jpg');
+    const templatePath = path.join(process.cwd(), 'src/app/api/generate-certificate/certi.png');
     const templateBytes = fs.readFileSync(templatePath);
 
     // Create a new PDF document and embed the JPEG
